@@ -71,4 +71,14 @@ class AplikasiController extends Controller
             echo "$mahasiswa->nama <br>";
         }
     }
+
+    public function count()
+    {
+        $fa = Fakultas::withCount('mahasiswas')->get();
+
+        foreach ($fa as $fakultas) {
+            echo "Fakultas $fakultas->nama memiliki
+                    $fakultas->mahasiswas_count mahasiswa <br>";
+        }
+    }
 }

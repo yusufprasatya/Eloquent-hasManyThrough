@@ -22,3 +22,5 @@ Route::get('/all', [AplikasiController::class, 'all']);
 Route::get('/relationship-1', [AplikasiController::class, 'relationship1']);
 Route::get('/relationship-2', [AplikasiController::class, 'relationship2']);
 Route::get('/relationship-3', [AplikasiController::class, 'relationship3']);
+
+Route::get('/count', [AplikasiController::class, 'count']);
